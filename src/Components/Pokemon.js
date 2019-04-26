@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Card, CardHeader, CardBody, CardTitle} from 'reactstrap';
+import {Card, CardHeader} from 'reactstrap';
 import CardImg from "reactstrap/es/CardImg";
 
 import Bulbasaur from '../images/Bulbasaur.png';
@@ -23,13 +23,13 @@ class Pokemon extends Component {
     getCardImage() {
         switch (this.props.name) {
             case 'Bulbasaur':
-                return <CardImg  style={{ width:"auto"}}  height="250px" src={Bulbasaur}/>;
+                return <CardImg style={{width: "auto"}} height="250px" src={Bulbasaur}/>;
             case 'Squirtle':
-                return <CardImg style={{ width:"auto"}} height="250px" src={Squirtle}/>;
+                return <CardImg style={{width: "auto"}} height="250px" src={Squirtle}/>;
             case 'Pickachu':
-                return <CardImg style={{ width:"auto"}} height="250px" src={Pickachu}/>;
+                return <CardImg style={{width: "auto"}} height="250px" src={Pickachu}/>;
             case 'Charmander':
-                return <CardImg style={{ width:"auto"}} height="250px" src={Charmander}/>;
+                return <CardImg style={{width: "auto"}} height="250px" src={Charmander}/>;
         }
     }
 
@@ -37,7 +37,7 @@ class Pokemon extends Component {
 
 
         return (
-            <Card className="myCard">
+            <Card onClick={() => this.props.upVote(this.props.name)} className="myCard">
                 <CardHeader> {this.props.name}</CardHeader>
                 {this.getCardImage()}
             </Card>
