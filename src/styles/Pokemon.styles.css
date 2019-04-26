@@ -1,0 +1,6 @@
+.myCard {
+    cursor: pointer;
+    display: inline-block !important;
+    margin: 20px;
+    width: 35%;
+}

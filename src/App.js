@@ -8,15 +8,9 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                    <p>
-                        Choose your favorite pokemon!
-                    </p>
-                    <ul>
-                        <li onClick={pokemon.child("Squirtle").push().set({count: 1})}>Squirtle</li>
-                    </ul>
-                </header>
-                <Pokemon name="Bulbasaur"></Pokemon>
+                <p className="App-header"> Choose your favorite Pokemon! </p>
+                <Pokemon onClick={pokemon.child("Squirtle").push().set({count: 1})} name="Squirtle"></Pokemon>
+                <Pokemon onClick={pokemon.child("Bulbasaur").push().set({count: 1})} name="Bulbasaur"></Pokemon>
                 <Pokemon name="Pickachu"></Pokemon>
                 <Pokemon name="Charmander"></Pokemon>
             </div>

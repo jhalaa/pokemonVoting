@@ -7,6 +7,8 @@ import Charmander from '../images/Charmander.png';
 import Pickachu from '../images/Pickachu.png';
 import Squirtle from '../images/Squirtle.png';
 
+import '../styles/Pokemon.styles.css';
+
 
 class Pokemon extends Component {
     constructor(props) {
@@ -21,13 +23,13 @@ class Pokemon extends Component {
     getCardImage() {
         switch (this.props.name) {
             case 'Bulbasaur':
-                return <CardImg top src={Bulbasaur}/>;
+                return <CardImg  style={{ width:"auto"}}  height="250px" src={Bulbasaur}/>;
             case 'Squirtle':
-                return <CardImg top src={Squirtle}/>;
+                return <CardImg style={{ width:"auto"}} height="250px" src={Squirtle}/>;
             case 'Pickachu':
-                return <CardImg top src={Pickachu}/>;
+                return <CardImg style={{ width:"auto"}} height="250px" src={Pickachu}/>;
             case 'Charmander':
-                return <CardImg top src={Charmander}/>;
+                return <CardImg style={{ width:"auto"}} height="250px" src={Charmander}/>;
         }
     }
 
@@ -35,7 +37,7 @@ class Pokemon extends Component {
 
 
         return (
-            <Card style={{ display: "inline-block", margin:"20px",width:"35%",height:"35%"}}>
+            <Card className="myCard">
                 <CardHeader> {this.props.name}</CardHeader>
                 {this.getCardImage()}
             </Card>
