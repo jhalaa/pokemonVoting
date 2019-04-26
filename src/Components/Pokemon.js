@@ -45,6 +45,4 @@ class Pokemon extends Component {
     }
 }
 
-const mapStateToProps = store => ({});
-
 export default Pokemon;
